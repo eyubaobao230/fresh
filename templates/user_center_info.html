@@ -1,0 +1,31 @@
+{% extends 'base_main.html' %}
+
+{% block title %}
+    天天生鲜-用户中心
+{% endblock %}
+
+{% block content %}
+	<div class="main_con clearfix">
+		<div class="left_menu_con clearfix">
+			<h3>用户中心</h3>
+			<ul>
+				<li><a href="{% url 'user:user_center' %}" class="active">· 个人信息</a></li>
+				<li><a href="{% url 'user:user_order' %}">· 全部订单</a></li>
+				<li><a href="{% url 'user:user_site' %}">· 收货地址</a></li>
+			</ul>
+		</div>
+		<div class="right_content clearfix">
+				<div class="info_con clearfix">
+				<h3 class="common_title2">基本信息</h3>
+						<ul class="user_info_list">
+							<li><span>用户名：</span>{{ user.username }}</li>
+							<li><span>邮箱：</span>{{ user.email }}</li>
+
+						</ul>
+				</div>
+
+		</div>
+	</div>
+{% endblock %}
+
+
